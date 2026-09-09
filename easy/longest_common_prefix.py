@@ -1,3 +1,6 @@
+#Задача: найти самый длинный общий префикс строк в массиве
+#Идея: идем по позициям слева направо,пока символ совпадает во всех строках
+#длина строк<=200,поэтому r<200
 class Solution(object):
     def longestCommonPrefix(self, strs):
         r=0
@@ -11,9 +14,5 @@ class Solution(object):
             else:
                 if r==0:
                     return ''
-                return(strs[0][:r])
-                
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
+                return(strs[0][:r]) 
+            return strs[0]#Если все строки длиной 200
