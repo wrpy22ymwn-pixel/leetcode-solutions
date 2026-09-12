@@ -1,0 +1,15 @@
+#идея в том,что у нас есть два указателя,если их сумма больше цели,то двигаем правый,если меньше,то левый
+#так пока их сумма не совпадет с целью
+class Solution(object):
+    def twoSum(self, nums, target):
+        nums.sort()
+        r=len(nums)-1
+        l=0
+        while r>l:
+            if (nums[l]+nums[r])==target:
+                return [l+1,r+1]
+            elif (nums[l]+nums[r])<target:
+                l+=1
+            elif (nums[l]+nums[r])>target:
+                r-=1
+        return [-1,-1]
