@@ -1,0 +1,12 @@
+#дается массив с числами,все нули нужно передвинуть в конец массива
+#решаем методом медленного и быстрого указателя
+class Solution(object):
+    def moveZeroes(self, nums):
+        s=0
+        f=0
+        while f<len(nums):
+            if nums[f]!=0:
+                nums[f],nums[s]=nums[s],nums[f]
+                s+=1
+            f+=1
+        return nums
