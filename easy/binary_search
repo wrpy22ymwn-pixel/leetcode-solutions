@@ -1,0 +1,15 @@
+class Solution(object):
+    def search(self, nums, target):
+        l=0
+        r=len(nums)-1
+        while r-l>1:
+            p=l+(r-l)//2
+            if target>=nums[p]:
+                l=p
+            else:
+                r=p
+        if nums[l]==target:
+            return l
+        if nums[r]==target:
+            return r
+        return -1
