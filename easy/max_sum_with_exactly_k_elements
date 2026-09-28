@@ -1,0 +1,7 @@
+lass Solution(object):
+    def maximizeSum(self, nums, k):
+        m=0
+        l=max(nums)
+        for i in range(k):
+            m+=l+i
+        return m
